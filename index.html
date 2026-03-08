@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart - Toko Sayur Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ecommerce-modern.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div class="bg-decoration"></div>
+<div class="bg-decoration2"></div>
+<div class="pattern-bg"></div>
+<div class="leaf"></div>
+<div class="leaf"></div>
+<div class="leaf"></div>
+<div id="invoice" class="invoice-popup">
+<div class="invoice-card">
+<i class="fa-solid fa-circle-check success-icon"></i>
+<h2>Pembayaran Berhasil</h2>
+<p>Terima kasih telah berbelanja di FreshMart</p>
+<div class="invoice-detail">
+<p>No Invoice: <span id="noInvoice"></span></p>
+<p>Nama: <span id="invNama"></span></p>
+<p>Total: <span id="invTotal"></span></p>
+</div>
+<button onclick="tutupInvoice()">Tutup</button>
+</div>
+</div>
+<header>
+    <h1>Sayur Segar Mart</h1>
+    <nav>
+        <a href="#produk">Produk</a>
+       <a href="#keranjang" class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+</a>
+        <a href="#checkout">Checkout</a>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-text">
+        <h2>Sayur Segar Langsung Dari Perkebunan Sendiri</h2>
+        <p>Segar • Berkualitas • Baru petik</p>
+    </div>
+</section>
+<section id="produk" class="produk-container">
+    <h2>Daftar Sayur</h2>
+    <div class="produk-list" id="produk-list"></div>
+</section>
+<section id="keranjang" class="cart-container">
+
+<div class="cart-card">
+
+<div class="cart-header">
+<h2><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h2>
+<span class="cart-count">0 Item</span>
+</div>
+
+<div id="cart-items" class="cart-items"></div>
+
+<div class="cart-footer">
+<div class="cart-total">
+<span>Total</span>
+<h3>Rp <span id="total-price">0</span></h3>
+</div>
+<button class="checkout-btn" onclick="scrollToCheckout()">Checkout</button>
+</div>
+</div>
+</section>
+<section id="checkout" class="cart-container"></section>
+<form id="checkout-form">
+<div class="form-group">
+<label for="nama">Nama Lengkap</label>
+<input type="text" id="nama" required>
+</div>
+<div class="form-group">
+<label for="alamat">Alamat Pengiriman</label>
+<input type="text" id="alamat" required>
+</div>
+<div class="form-group">
+<label for="hp">Nomor HP</label>
+<input type="tel" id="hp" required>
+</div>
+<div class="form-group">
+<label for="metode">Metode Pembayaran</label>
+<select id="metode">
+<option>Transfer Bank</option>
+<option>COD</option>
+<option>E-Wallet</option>
+</select>
+</div>
+<button type="submit">🛒 Bayar Sekarang</button>
+</form>
+<footer>
+    <p>© 2026 Sayur Segar Mart - Toko Sayur Online</p>
+    <div class="social-section">
+<h3>Ikuti Kami</h3>
+<div class="social-icons">
+<a href="https://instagram.com/frhnibnl"
+class="social-btn instagram" target="_blank">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
+</a>
+<a href="https://wa.me/625703593660?text=Halo%20FreshMart,%20saya%20ingin%20bertanya%20tentang%20produk%20sayur%20Anda"
+class="social-btn whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
+<a href="https://facebook.com/IL"
+class="social-btn facebook" target="_blank">
+<i class="fab fa-facebook"></i>
+<span>Facebook</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+<!-- SUCCESS PAYMENT POPUP -->
+<div id="successPopup" class="success-popup">
+    <div class="success-card">
+        <div class="checkmark-circle">
+            <div class="checkmark"></div>
+        </div>
+        <h2>Pembayaran Berhasil</h2>
+        <p>Pesanan kamu sedang diproses</p>
+        <button onclick="tutupPopup()">OK</button>
+    </div>
+</div>
+</body>
+</html>
