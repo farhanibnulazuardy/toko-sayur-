@@ -1,0 +1,520 @@
+/* ===== MODERN GROCERY ECOMMERCE STYLE ===== */
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+/* BODY */
+body {
+    background-image: url("https://i.pinimg.com/1200x/82/84/89/828489758785eff8b8db966e04cdf343.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+/* efek blur modern */
+body::before{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#4caf50;
+    border-radius:50%;
+    filter:blur(120px);
+    top:-100px;
+    left:-100px;
+    opacity:0.4;
+    z-index:-1;
+}
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#81c784;
+    border-radius:50%;
+    filter:blur(120px);
+    bottom:-100px;
+    right:-100px;
+    opacity:0.4;
+    z-index:-1;
+}
+/* HEADER MODERN */
+header {
+    background: rgba(46,125,50,0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+/* HERO MODERN */
+.hero {
+    padding: 140px 20px !important;
+    border-radius: 0 0 40px 40px;
+}
+/* GRID PRODUK MODERN */
+.produk-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    gap: 25px;
+}
+/* CARD PRODUK */
+.produk-card {
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 20px !important;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+.produk-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+/* BADGE */
+.produk-card::before {
+    content: "Segar";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #4caf50;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+/* GAMBAR */
+.produk-card img {
+    border-radius: 15px !important;
+    transition: 0.4s;
+}
+.produk-card:hover img {
+    transform: scale(1.08);
+}
+/* BUTTON MODERN */
+button {
+    border-radius: 30px !important;
+    padding: 12px !important;
+    font-weight: 600;
+    background: linear-gradient(135deg,#4caf50,#2e7d32) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+button:hover {
+    transform: scale(1.05);
+}
+/* CART MODERN */
+.cart-container {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 30px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+/* CHECKOUT MODERN */
+.checkout-container {
+    background: rgba(255,255,255,0.95) !important;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+}
+/* INPUT MODERN */
+input, select {
+    border-radius: 15px !important;
+    padding: 14px !important;
+}
+/* FOOTER */
+footer {
+    border-radius: 40px 40px 0 0;
+    margin-top: 80px;
+}
+/* ========================= */
+/* CONTAINER GLOBAL */
+/* ========================= */
+.cart-container,
+.checkout-container{
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+}
+/* ========================= */
+/* KERANJANG BELANJA */
+/* ========================= */
+.cart-container{
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+.cart-container h2{
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+#cart-items{
+    margin-top: 15px;
+}
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+/* total */
+.cart-container h3{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #16a34a;
+}
+/* ========================= */
+/* CHECKOUT MODERN */
+/* ========================= */
+.checkout-container{
+    text-align: center;
+}
+.checkout-container h2{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+/* card checkout */
+#checkout-form{
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 35px;
+    max-width: 480px;
+    margin: auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+#checkout-form:hover{
+    transform: translateY(-5px);
+}
+/* input modern */
+#checkout-form input,
+#checkout-form select{
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: 0.2s;
+}
+#checkout-form input:focus,
+#checkout-form select:focus{
+    border: 1px solid #16a34a;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22,163,74,0.15);
+}
+/* tombol modern */
+#checkout-form button{
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg,#16a34a,#22c55e);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#checkout-form button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(22,163,74,0.4);
+}
+/* ========================= */
+/* TOTAL BOX */
+/* ========================= */
+#checkout-form p{
+    background: #f0fdf4;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #166534;
+}
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media(max-width:768px){
+    .cart-container,
+    .checkout-container{
+        margin: 20px;
+        padding: 20px;
+    }
+}
+/* ========================= */
+/* EFEK DAUN MELAYANG */
+/* ========================= */
+body::before,
+body::after {
+    pointer-events: none;
+}
+/* daun 1 */
+/* buat beberapa daun */
+.leaf:nth-child(1) {
+    left: 5%;
+    animation-duration: 8s;
+}
+.leaf:nth-child(2) {
+    left: 25%;
+    animation-duration: 12s;
+}
+.leaf:nth-child(3) {
+    left: 45%;
+    animation-duration: 10s;
+}
+.leaf:nth-child(4) {
+    left: 65%;
+    animation-duration: 14s;
+}
+.leaf:nth-child(5) {
+    left: 85%;
+    animation-duration: 9s;
+}
+/* animasi */
+@keyframes floatLeaf {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        left: 0%;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        left: 100%;
+    }
+}
+.pattern-bg {
+    z-index: 0 !important;
+}
+.checkout-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+.checkout-card{
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    position:relative;
+    z-index:5;
+}
+.checkout-card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.checkout-total{
+    background:#ecfdf5;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+.form-group{
+    margin-bottom:15px;
+    display:flex;
+    flex-direction:column;
+}
+.form-group label{
+    font-size:14px;
+    margin-bottom:5px;
+}
+.form-group input{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:14px;
+}
+.form-group input:focus{
+    outline:none;
+    border:1px solid #22c55e;
+    box-shadow:0 0 0 3px rgba(34,197,94,0.15);
+}
+#checkout-form button{
+    margin-top:15px;
+    padding:14px;
+    border:none;
+    border-radius:50px;
+    background: linear-gradient(135deg,#16a34a,#22c55e);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+#checkout-form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(22,163,74,0.4);
+}
+/* ========================= */
+/* FIX CHECKOUT FORM LAYOUT */
+/* LETAKKAN PALING BAWAH */
+/* ========================= */
+#checkout-form{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:15px !important;
+    width:100%;
+}
+#checkout-form input,
+#checkout-form select,
+#checkout-form button{
+    width:100% !important;
+    display:block;
+}
+.form-group{
+    width:100% !important;
+}
+.checkout-card{
+    background:white !important;
+}
+/* POPUP INVOICE */
+.invoice-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999999;
+}
+.invoice-card{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+animation:pop 0.4s ease;
+}
+.success-icon{
+font-size:60px;
+color:#22c55e;
+margin-bottom:15px;
+animation:success 0.6s ease;
+}
+@keyframes pop{
+from{
+transform:scale(0.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+@keyframes success{
+0%{
+transform:scale(0);
+}
+100%{
+transform:scale(1);
+}
+}
+.invoice-card button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#22c55e;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+/* FIX FINAL CHECKOUT FORM */
+#checkout-form{
+display:flex;
+flex-direction:column;
+align-items:stretch;
+justify-content:center;
+width:100%;
+max-width:400px;
+margin:auto;
+gap:18px;
+}
+/* form group */
+.form-group{
+width:100%;
+margin-bottom:5px;
+text-align:left; /* ubah ke kiri */
+}
+/* label */
+.form-group label{
+display:block;
+margin-bottom:6px;
+font-size:14px;
+font-weight:600;
+color:#333;
+text-align:left; /* penting */
+padding-left:2px;
+}
+/* input */
+.form-group input,
+.form-group select{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:1px solid #ddd;
+background:white;
+font-size:14px;
+text-align:left; /* penting */
+box-sizing:border-box;
+}
+/* focus effect */
+.form-group input:focus,
+.form-group select:focus{
+border-color:#22c55e;
+outline:none;
+box-shadow:0 0 0 3px rgba(34,197,94,0.15);
+}
+/* ========================= */
+/* SOCIAL MEDIA SECTION */
+/* ========================= */
+.social-section{
+text-align:center;
+margin-top:40px;
+padding:30px;
+}
+.social-section h3{
+font-size:20px;
+margin-bottom:15px;
+color:white;
+}
+.social-icons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+.social-btn{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px 20px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+/* warna masing masing */
+.instagram{
+background:linear-gradient(45deg,#fd5949,#d6249f,#285AEB);
+}
+.whatsapp{
+background:#25D366;
+}
+.facebook{
+background:#1877F2;
+}
+.tiktok{
+background:#000;
+}
+/* hover effect */
+.social-btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.3);
+
+}
